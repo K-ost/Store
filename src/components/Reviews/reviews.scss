@@ -1,0 +1,37 @@
+.reviews {
+  margin: 0 0 30px;
+}
+
+.review {
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 18px;
+  margin: 0 0 10px;
+  padding: 10px 16px;
+  &-author {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    margin-right: 10px;
+  }
+  &-list {
+    margin: 0 0 30px;
+  }
+  &-date {
+    color: #757575;
+    font-size: 13px;
+    line-height: 16px;
+  }
+  &-header {
+    display: flex;
+    align-items: center;
+    margin: 0 0 8px;
+    .btn-danger {margin-left: auto; padding: 0; width: 22px; height: 22px;}
+  }
+  &Form {
+    background: #f1f1f1;
+    border-radius: 8px;
+    padding: 18px;
+  }
+}

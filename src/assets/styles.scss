@@ -1,0 +1,197 @@
+/* global */
+img {max-width: 100%;}
+h1 {margin-bottom: 24px;}
+.page-link {background: none; box-shadow: none !important;}
+
+/* mainwrap */
+.mainwrap {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  &_container {flex: 1;}
+}
+
+/* header */
+.header {
+  background: #252525;
+  padding: 10px 16px;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  margin: 0 0 20px;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  .container {display: flex; align-items: center; justify-content: space-between;}
+  h5 {font-size: 24px; line-height: 26px; margin: 0;}
+  .nav-item {
+    margin-right: 5px;
+    &:last-child {margin-right: 0;}
+  }
+  .nav-link {background: #414141; color: #fff;}
+  .nav {margin-left: auto;}
+}
+
+/* footer */
+.footer {background: #3f3f3f; height: 40px;}
+
+/* form-select */
+.form-select {
+  box-shadow: none !important;
+}
+
+/* btn-user */
+.btn {
+  box-shadow: none !important;
+  &-block {width: 100%; display: block;}
+  .spinner-border {margin-left: 10px;}
+}
+.btn-lock, .btn-user, .btn-message {
+  background-image: url(../assets/img/user.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 18px;
+  height: 40px;
+  width: 40px;
+  margin-left: 20px;
+}
+.btn-lock {background-image: url(../assets/img/lock.svg);}
+.btn-message {background-image: url(../assets/img/env.svg);}
+.products-row {margin-bottom: 20px;}
+
+
+
+/* Form */
+.form-control {box-shadow: none !important;}
+.form-control.error {border-color: #ff0000;}
+.form {
+  background: #f1f1f1; border-radius: 10px; padding: 20px; max-width: 500px;
+  h3 {margin: 0 0 16px;}
+  &-line {
+    margin: 0 0 20px;
+    &:last-child {margin: 0;}
+  }
+  .alert {margin: 0; padding-top: 8px; padding-bottom: 8px;}
+  textarea {resize: none; height: 120px;}
+}
+.input-field {
+  margin: 0 0 20px;
+  &.last {margin: 0;}
+}
+
+.invalid-feedback, .valid-feedback {display: block;}
+
+.form-floating {
+  margin: 0;
+  &.error {border-color: red;}
+}
+.form-error {
+  color: red;
+  font-size: 14px;
+  line-height: 16px;
+  margin: 8px 0 0;
+}
+
+
+/* check-field */
+input[type="checkbox"] {
+  background: #fff url(../assets/img/check.svg) -9999px -9999px / 12px no-repeat;
+  border: 1px solid #d1d1d1;
+  border-radius: 3px;
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  padding: 0;
+  -webkit-appearance: none;
+  &:checked {background-position: center center; border-color: #aaa;}
+}
+.check-field {
+  display: inline-block; position: relative; padding-left: 26px;
+  font-size: 14px; line-height: 18px; cursor: pointer;
+  input[type="checkbox"] {position: absolute; left: 0; top: -1px;}
+}
+
+
+
+/* list-group */
+.list-group {
+  margin-bottom: 20px;
+  padding: 0;
+  li {
+    list-style: none;
+    &:not(:last-child) a {
+      border-bottom: 0;
+    }
+    &:first-child a {border-radius: 4px 4px 0 0;}
+    &:last-child a {border-radius: 0 0 4px 4px;}
+  }
+  &-item {
+    display: flex;
+    align-items: center;
+    transition: all 200ms ease-in;
+    &:hover {background: #f1f1f1;}
+    .btn-danger {margin-left: auto;}
+  }
+}
+
+
+/* table-users */
+.table-users {
+  .btn {min-width: 35px; height: 35px; width: auto;}
+  .btn-message {margin-right: 5px;}
+}
+
+
+/* totalPriceBox */
+.totalPriceBox {
+  display: flex;
+  margin: 0 0 20px;
+  h3 {margin: 0 10px 0 0;}
+}
+
+
+/* productPage */
+.productPage {
+  &-price {
+    background: #e3e3e3;
+    border-radius: 4px;
+    font-size: 14px;
+    margin: 0 10px 0 0;
+    padding: 3px 8px;
+    span {font-size: 18px; font-weight: 700;}
+  }
+  &-amount {
+    display: flex;
+    align-items: center;
+    margin: 0 0 20px;
+  }
+  &-description {
+    font-size: 14px;
+    line-height: 22px;
+    margin: 0 0 30px;
+    h2 {
+      font-size: 22px;
+      line-height: 26px;
+    }
+  }
+}
+
+
+/* dragfield */
+.dragfield {
+  border: 2px dashed #ddd; height: 100px; border-radius: 10px;
+  margin: 0 0 24px; display: flex; align-items: center; justify-content: center;
+}
+
+
+@media screen and (max-width: 560px) {
+  .row {margin-left: -8px; margin-right: -8px;}
+  [class*='col-'] {padding-left: 8px; padding-right: 8px;}
+  .header .container {padding-left: 0; padding-right: 0;}
+  .header .nav {margin-left: 0;}
+  .header .btn-lock, .header .btn-user {margin-left: auto;}
+  .product-grid {margin-bottom: 16px;}
+  .product-buy {margin-bottom: 8px;}
+}
+
+

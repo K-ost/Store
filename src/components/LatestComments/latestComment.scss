@@ -1,0 +1,25 @@
+.latestComment {
+  border: 1px solid #e3e3e3;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  &-text {
+    background: #f1f1f1;
+    border-radius: 6px;
+    font-size: 13px;
+    line-height: 16px;
+    font-style: italic;
+    flex: 1;
+    margin: 0 0 10px;
+    padding: 10px 16px;
+  }
+  &-author {
+    color: #565656;
+    line-height: 18px;
+    font-size: 14px;
+    b {color: #000; font-weight: 700; font-size: 16px; margin-right: 6px;}
+  }
+  &s .col-12 {margin-bottom: 20px;}
+}

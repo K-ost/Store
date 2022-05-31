@@ -1,0 +1,19 @@
+.sorting {
+  display: flex;
+  align-items: center;
+  margin: 0 0 24px;
+  &-title {
+    font-size: 14px;
+    line-height: 16px;
+    margin-right: 16px;
+  }
+}
+.btn {
+  font-size: 14px;
+}
+.dropdown-item {
+  font-size: 14px;
+  line-height: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}

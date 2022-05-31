@@ -1,0 +1,30 @@
+.filter {
+  &-item {
+    background: #f1f1f1;
+    border-radius: 4px;
+    margin: 0 0 10px;
+    &:last-child {margin: 0;}
+  }
+  &-title {
+    background: #545454;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 18px;
+    padding: 8px 16px;
+  }
+  &-hide {
+    overflow: hidden;
+    padding: 0;
+    transition: height 100ms linear;
+    &__inner {padding: 8px 16px;}
+  }
+  &-check {
+    margin: 0 0 4px;
+    &:last-child {margin: 0;}
+  }
+  .form-control {
+    font-size: 14px;
+  }
+}

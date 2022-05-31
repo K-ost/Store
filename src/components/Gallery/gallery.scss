@@ -1,0 +1,10 @@
+.gallery {
+  position: sticky;
+  top: 80px;
+  .swiper-pagination {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    margin: 10px 0 0;
+  }
+}

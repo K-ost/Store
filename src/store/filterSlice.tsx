@@ -8,6 +8,7 @@ export interface filterState {
   price: string
   reset: boolean
   page: string
+  cpu: string[]
 }
 
 const initialState: filterState = {
@@ -17,7 +18,8 @@ const initialState: filterState = {
   priceTo: '',
   price: '',
   reset: true,
-  page: '1'
+  page: '1',
+  cpu: []
 }
 
 export const filterSlice = createSlice({
@@ -30,13 +32,13 @@ export const filterSlice = createSlice({
       state.sort = action.payload
     },
 
-    // Filter / setCategory
-    setCategory: (state, action) => {
+    // Filter
+    setFilter: (state, action) => {
       state.reset = false
-      if ( !state.category.includes(action.payload) ) {
-        state.category = [action.payload, ...state.category].sort()
+      if ( !state[action.payload.cat].includes(action.payload.data) ) {
+        state[action.payload.cat] = [action.payload.data, ...state[action.payload.cat]].sort()
       } else {
-        state.category = state.category.filter(el => el !== action.payload)
+        state[action.payload.cat] = state[action.payload.cat].filter(el => el !== action.payload.data)
       }
     },
 
@@ -57,6 +59,7 @@ export const filterSlice = createSlice({
     // resetFilters
     resetFilters: (state) => {
       state.category = []
+      state.cpu = []
       state.price = ''
       state.priceFrom = ''
       state.priceTo = ''
@@ -72,5 +75,5 @@ export const filterSlice = createSlice({
 })
 
 // Action creators are generated for each case reducer function
-export const { setSort, setCategory, setPriceFrom, setPriceTo, resetFilters, paginate } = filterSlice.actions
+export const { setSort, setPriceFrom, setPriceTo, resetFilters, paginate, setFilter } = filterSlice.actions
 export default filterSlice.reducer

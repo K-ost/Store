@@ -14,12 +14,14 @@ import Pager from '../components/Pager/Pager'
 
 const Catalog: React.FC = () => {
   const [products, setProducts] = useState<productType[]>([])
-  const [productsLength, setProductsLength] = useState<string>('')
+  const [productsLength, setProductsLength] = useState<number>(0)
+  const [filteredLength, setFilteredLength] = useState<number>(0)
   const dispatch = useDispatch<AppDispatch>()
   const sort = useSelector((state: RootState) => state.filter.sort)
   const category = useSelector((state: RootState) => state.filter.category)
   const price = useSelector((state: RootState) => state.filter.price)
   const page = useSelector((state: RootState) => state.filter.page)
+  const cpu = useSelector((state: RootState) => state.filter.cpu)
 
   // Query
   const { data, loading, refetch } = useQuery(gql`
@@ -27,7 +29,8 @@ const Catalog: React.FC = () => {
       getAllProducts(sort: "${sort}", count: "6", perpage: "${page}", filter: {
         category: "${category.join(',')}",
         price: "${price}"
-      }) { data { id, title, category, price, img, slug }, length, perpage }
+        cpu: "${cpu.join(',')}"
+      }) { data { id, title, category, price, img, slug, feats { cpu } }, length, perpage, filtered }
     }
   `)
 
@@ -35,9 +38,10 @@ const Catalog: React.FC = () => {
     if (!loading) {
       setProducts(data?.getAllProducts.data)
       setProductsLength(data?.getAllProducts.length)
+      setFilteredLength(data?.getAllProducts.filtered)
     }
     refetch()
-  }, [data?.getAllProducts, loading, refetch, sort, category, price, page])
+  }, [data?.getAllProducts, loading, refetch, sort, category, price, page, dispatch, products])
 
   useEffect(() => {
     return () => {
@@ -50,16 +54,16 @@ const Catalog: React.FC = () => {
     <Container>
       <h1>Каталог</h1>
       <Row className="products-row">
+        <Col lg="3">
+          <Filter />
+        </Col>
         <Col lg="9">
           <Sort />
           <Row>
             {products.map(el => <Product key={el.id} product={el} />)}
             {loading && <Load />}
           </Row>
-          <Pager length={productsLength} />
-        </Col>
-        <Col lg="3">
-          <Filter />
+          {(filteredLength > 6 && productsLength > 6) && <Pager length={productsLength} />}
         </Col>
       </Row>
     </Container>

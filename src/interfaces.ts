@@ -3,7 +3,7 @@ export interface IFeats {
   simFormat?: string
   screen?: number
   screenSize?: string
-  cpu?: number
+  cpu?: string
   hard?: number
   memory?: number
   camera?: number

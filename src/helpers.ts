@@ -40,6 +40,11 @@ export const GET_ALL_REVIEWS = gql`
     getAllReviews { id, author, productID, body }
   }
 `
+export const GET_CPU = gql`
+  query Get_CPU {
+    getFilterCPU { id, title }
+  }
+`
 
 export const scoreFunc = rate => String(rate && Math.round(rate.value / rate.count))
 

@@ -1,4 +1,11 @@
 .filter {
+  margin: 0 0 20px;
+  &-header {
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 700;
+    margin: 0 0 14px;
+  }
   &-item {
     background: #f1f1f1;
     border-radius: 4px;
@@ -9,7 +16,6 @@
     background: #545454;
     border-radius: 4px;
     color: #fff;
-    cursor: pointer;
     font-size: 16px;
     line-height: 18px;
     padding: 8px 16px;
@@ -27,4 +33,16 @@
   .form-control {
     font-size: 14px;
   }
+  &-inner {
+    transition: height 100ms linear;
+    overflow: hidden;
+  }
+}
+
+.btn-filter {
+  margin: 0 0 10px;
+}
+
+@media screen and (min-width: 992px) {
+  .filter-inner {height: auto !important;}
 }

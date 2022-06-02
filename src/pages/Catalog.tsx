@@ -52,7 +52,7 @@ const Catalog: React.FC = () => {
   
   return (
     <Container>
-      <h1>Каталог</h1>
+      <h1>Catalog</h1>
       <Row className="products-row">
         <Col lg="3">
           <Filter />

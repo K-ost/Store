@@ -12,6 +12,7 @@ const LatestComments: React.FC = () => {
 
   useEffect(() => {
     if (!loading) {
+      console.log(data?.getAllReviews)
       setLastReviews(data?.getAllReviews)
     }
   }, [loading, data?.getAllReviews])

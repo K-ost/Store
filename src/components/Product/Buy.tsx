@@ -15,7 +15,7 @@ const Buy: React.FC<buyProps> = ({ details }) => {
       className="btn btn-sm btn-primary"
       onClick={() => dispatch(addOrder(details))}
     >
-      В корзину
+      Buy
     </button>
   )
 }

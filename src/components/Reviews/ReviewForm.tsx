@@ -27,12 +27,12 @@ const ReviewForm: React.FC<IReviewForm> = ({ id }) => {
     }
     addReview({ variables: { input: newReview } })
     reset()
-    dispatch(toast('Комментарий успешно добавлен'))
+    dispatch(toast('Review successfully added'))
   }
 
   return (
     <div className="reviewForm">
-      <h4>Добавить комментарий</h4>
+      <h4>Add review</h4>
 
       <form onSubmit={handleSubmit(onSubmit)}>
         {reviewFields.map(el => (
@@ -44,8 +44,8 @@ const ReviewForm: React.FC<IReviewForm> = ({ id }) => {
             error={errors[el?.id]?.message}
           />
         ))}
-        <Area label="Текст отзыва" options={register('body', {required: 'Обязательное поле', min: 10})} error={errors['body']?.message} />
-        <button type="submit" className="btn btn-primary">Добавить отзыв</button>
+        <Area label="Text review" options={register('body', {required: 'Required field', min: 10})} error={errors['body']?.message} />
+        <button type="submit" className="btn btn-primary">Add review</button>
       </form>
     </div>
   )

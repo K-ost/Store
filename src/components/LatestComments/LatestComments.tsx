@@ -19,7 +19,7 @@ const LatestComments: React.FC = () => {
 
   return (
     <div className="latestComments">
-      <h3>Последние комментарии</h3>
+      <h3>Latest Comments</h3>
       <div className="row">
         {lastReviews.map((el: IReview) => <LatestComment key={el.id} el={el} />).reverse().slice(0,4)}
         {loading && <Load />}

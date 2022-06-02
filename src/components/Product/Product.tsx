@@ -27,7 +27,7 @@ const Product: React.FC<prodProps> = ({ product }) => {
               <Buy details={product} />
             </div>
             <div className='col-12 col-sm-6'>
-              <Link to={`/catalog/${product.slug}`} className="btn btn-sm btn-secondary">Подробнее</Link>
+              <Link to={`/catalog/${product.slug}`} className="btn btn-sm btn-secondary">More...</Link>
             </div>
           </div>
         </div>

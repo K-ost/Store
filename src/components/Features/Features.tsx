@@ -9,7 +9,7 @@ interface IFeatures {
 const Features: React.FC<IFeatures> = ({ details }) => {
   return (
     <>
-      <h4>Характеристики</h4>
+      <h4>Features</h4>
       <table className="table table-striped features">
         <tbody>
           {details?.sims && <tr>

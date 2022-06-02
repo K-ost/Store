@@ -6,7 +6,7 @@ import { AppDispatch } from '../../store/store'
 import './sort.scss'
 
 const Sort: React.FC = () => {
-  const [title, setTitle] = useState<string>('По умолчанию')
+  const [title, setTitle] = useState<string>('Default')
   const dispatch = useDispatch<AppDispatch>()
 
   const handler = e => {
@@ -20,9 +20,9 @@ const Sort: React.FC = () => {
       <Dropdown>
         <Dropdown.Toggle variant="secondary">{title}</Dropdown.Toggle>
         <Dropdown.Menu>
-          <Dropdown.Item onClick={handler} id="">По умолчанию</Dropdown.Item>
-          <Dropdown.Item onClick={handler} id="asc">Сначала дешевые</Dropdown.Item>
-          <Dropdown.Item onClick={handler} id="desc">Сначала дорогие</Dropdown.Item>
+          <Dropdown.Item onClick={handler} id="">Default</Dropdown.Item>
+          <Dropdown.Item onClick={handler} id="asc">Asc price</Dropdown.Item>
+          <Dropdown.Item onClick={handler} id="desc">Desc price</Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>
     </div>

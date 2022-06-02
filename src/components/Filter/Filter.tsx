@@ -30,20 +30,20 @@ const Filter: React.FC = () => {
 
   return (
     <div className="filter">
-      <button className="btn btn-primary btn-filter btn-block d-lg-none" onClick={() => setShowFilter(!showFilter)}>Показать фильтр</button>
+      <button className="btn btn-primary btn-filter btn-block d-lg-none" onClick={() => setShowFilter(!showFilter)}>Show filter</button>
       <div className="filter-inner" style={{ height }}>
         <div className="filter-inner__height" ref={refHeight}>
-          <div className="filter-header">Фильтр</div>
-          <FilterItem title="Бренд" list={categories} type="checkbox" cat="category" />
-          <FilterItem title="Процессор" list={CPU} type="checkbox" cat="cpu" />
+          <div className="filter-header">Filter</div>
+          <FilterItem title="Category" list={categories} type="checkbox" cat="category" />
+          <FilterItem title="CPU" list={CPU} type="checkbox" cat="cpu" />
 
           <div className="filter-item">
-            <div className="filter-title">Цена</div>
+            <div className="filter-title">Price</div>
             <div className="filter-hide">
               <div className="filter-hide__inner">
                 <div className="input-group">
-                  <input type="number" placeholder="От" className="form-control" min="1" onChange={e => dispatch(setPriceFrom(e.target.value))} value={from} />
-                  <input type="number" placeholder="До" className="form-control" onChange={e => dispatch(setPriceTo(e.target.value))} value={to} />
+                  <input type="number" placeholder="From" className="form-control" min="1" onChange={e => dispatch(setPriceFrom(e.target.value))} value={from} />
+                  <input type="number" placeholder="To" className="form-control" onChange={e => dispatch(setPriceTo(e.target.value))} value={to} />
                 </div>
               </div>
             </div>

@@ -57,29 +57,29 @@ export const authFields = [
     id: "email",
     label: "E-mail",
     options: {
-      required: 'Обязательное поле',
+      required: 'Required field',
       pattern: {
         value: /^\S+@\S+$/i,
-        message: 'Некорректный e-mail'
+        message: 'Incorrect e-mail'
       }
     }
   },
-  { type: "password", id: "password", label: "Пароль", options: {required: 'Обязательное поле'} }
+  { type: "password", id: "password", label: "Password", options: {required: 'Required field'} }
 ] as field[]
 
 
 // Add Review Fields
 export const reviewFields = [
-  { type: "text", id: "author", label: "Ваше имя", options: {required: 'Обязательное поле'} },
+  { type: "text", id: "author", label: "Username", options: {required: 'Required field'} },
   {
     type: "email",
     id: "email",
     label: "E-mail",
     options: {
-      required: 'Обязательное поле',
+      required: 'Required field',
       pattern: {
         value: /^\S+@\S+$/i,
-        message: 'Некорректный e-mail'
+        message: 'Incorrect e-mail'
       }
     }
   }
@@ -88,43 +88,43 @@ export const reviewFields = [
 
 // Fields of basket form
 export const fields = [
-  { type: "text", id: "firstname", label: "Ваше имя", options: {required: 'Обязательное поле'} },
-  { type: "text", id: "lastname", label: "Фамилия", options: {maxLength: 80} },
+  { type: "text", id: "firstname", label: "First name", options: {required: 'Required field'} },
+  { type: "text", id: "lastname", label: "Last name", options: {maxLength: 80} },
   {
     type: "email",
     id: "email",
     label: "E-mail",
     options: {
-      required: 'Обязательное поле',
+      required: 'Required field',
       pattern: {
         value: /^\S+@\S+$/i,
-        message: 'Некорректный e-mail'
+        message: 'Incorrect e-mail'
       }
     }
   },
-  { type: "tel", id: "tel", label: "Телефон", options: {required: 'Обязательное поле'} },
-  { type: "select", id: "city", label: "Город" }
+  { type: "tel", id: "tel", label: "Phone", options: {required: 'Required field'} },
+  { type: "select", id: "city", label: "City" }
 ] as field[]
 
 
 // Fields of register form
 export const registerFields = [
-  { type: "text", id: "firstname", label: "Ваше имя", options: {required: 'Обязательное поле', min: 3} },
-  { type: "text", id: "lastname", label: "Фамилия", options: {min: 3} },
+  { type: "text", id: "firstname", label: "First name", options: {required: 'Required field', min: 3} },
+  { type: "text", id: "lastname", label: "Last name", options: {min: 3} },
   {
     type: "email",
     id: "email",
     label: "E-mail",
     options: {
-      required: 'Обязательное поле',
+      required: 'Required field',
       pattern: {
         value: /^\S+@\S+$/i,
-        message: 'Некорректный e-mail'
+        message: 'Incorrect e-mail'
       }
     }
   },
-  { type: "password", id: "password", label: "Пароль", options: {required: 'Обязательное поле', min: 6} },
-  { type: "password", id: "repass", label: "Подтвердите пароль", options: {required: 'Обязательное поле', min: 6} }
+  { type: "password", id: "password", label: "Password", options: {required: 'Required field', min: 6} },
+  { type: "password", id: "repass", label: "Re-password", options: {required: 'Required field', min: 6} }
 ] as field[]
 
 

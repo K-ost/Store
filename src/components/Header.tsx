@@ -7,8 +7,8 @@ import { RootState } from '../store/store'
 import Auth from './Auth/Auth'
 
 const routes = [
-  { id: "1", title: "Главная", url: "/" },
-  { id: "2", title: "Каталог", url: "/catalog" }
+  { id: "1", title: "Home", url: "/" },
+  { id: "2", title: "Catalog", url: "/catalog" }
 ]
 
 const Header: React.FC = () => {

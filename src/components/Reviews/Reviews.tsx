@@ -39,10 +39,10 @@ const Reviews: React.FC<IReviews> = ({ id }) => {
 
   return (
     <div className="reviews">
-      <h4>Отзывы</h4>
+      <h4>Reviews</h4>
       <div className="review-list">
         {reviews.map(el => <Review key={el.id} details={el} remove={removeHandler} />)}
-        {!reviews.length && <p>Отзывов пока нет</p>}
+        {!reviews.length && <p>No reviews yet</p>}
         {loading && <p>Loading...</p>}
       </div>
       <ReviewForm id={id} />

@@ -33,7 +33,7 @@ const Auth: React.FC<IAuth> = ({ show, hide }) => {
 
   return (
     <ModalBox
-      title="Авторизация"
+      title="Sign in"
       show={show}
       hide={hide}
       nofooter={true}
@@ -49,11 +49,11 @@ const Auth: React.FC<IAuth> = ({ show, hide }) => {
           />
         ))}
         <div className="input-field">
-          <button type="submit" className="btn btn-primary">Войти</button>
+          <button type="submit" className="btn btn-primary">Login</button>
         </div>
       </form>
       <div className="input-field last">
-        <Link to="/register" onClick={hide}>Регистрация</Link>
+        <Link to="/register" onClick={hide}>Sign up</Link>
       </div>
     </ModalBox>
   )

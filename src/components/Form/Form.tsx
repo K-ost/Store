@@ -45,7 +45,7 @@ const Form: React.FC<IForm> = ({ orders, total }) => {
   return (
     <>
       {(orders.length > 0) && <div className="formWrapper">
-        <h3>Оформить заявку</h3>
+        <h3>Place an order</h3>
         <form onSubmit={handleSubmit(onSubmit)}>
           {
             fields.map(el => <Field
@@ -57,7 +57,7 @@ const Form: React.FC<IForm> = ({ orders, total }) => {
             />)
           }
           <button className="btn btn-lg btn-primary" type="submit">
-            Оформить заявку
+            Place an order
             {loading && <Spinner animation="border" variant="light" size="sm" />}
           </button>
         </form>

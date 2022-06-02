@@ -18,16 +18,16 @@ const Basket: React.FC = () => {
 
   return (
     <Container>
-      <h1>Корзина</h1>
+      <h1>Cart</h1>
 
       <div className="cart-row">
         {orders.map(order => <CartItem key={order.id} order={order} />)}
-        {orders.length === 0 && <p>Ваша корзина пуста</p>}
+        {orders.length === 0 && <p>Cart is empty</p>}
       </div>
 
       {orders.length !== 0 &&
         <div className="totalPriceBox">
-          <h3>Итоговая стоимость:</h3>
+          <h3>Total price:</h3>
           <Price price={totalPrice} />
         </div>
       }

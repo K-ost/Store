@@ -20,7 +20,7 @@ const LatestComment: React.FC<ILatestComment> = ({ el }) => {
         <div className="latestComment-text">{el.body.slice(0,80)}{el.body.length > 80 && '...'}</div>
         <div className="latestComment-author">
           <b>{el.author}</b>
-          к товару <Link to={`/catalog/${data?.getProductByID?.slug}`}>{data?.getProductByID?.title}</Link>
+          to product <Link to={`/catalog/${data?.getProductByID?.slug}`}>{data?.getProductByID?.title}</Link>
         </div>
       </div>
     </div>

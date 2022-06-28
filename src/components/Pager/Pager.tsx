@@ -10,7 +10,7 @@ interface IPager {
 const Pager: React.FC<IPager> = ({ length }) => {
   const dispatch = useDispatch<AppDispatch>()
   const page = useSelector((state: RootState) => state.filter.page)
-  const pages: number = Math.round(length / 6)
+  const pages: number = Math.ceil(length / 6)
   const pagesArray: number[] = []
   for (let i = 1; i <= pages; i++) {
     pagesArray.push(i)
